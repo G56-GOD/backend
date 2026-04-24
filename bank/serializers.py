@@ -91,7 +91,7 @@ class TransferPreviewSerialzer(serializers.ModelSerializer):
         }
     def validate_cash(self,value):
         if value <= 0:
-            raise serializers.ValidationError("Сумма для перевода не может быт ьменьше 1")
+            raise serializers.ValidationError("Сумма для перевода не может быть меньше 1")
         return value
     
     def validate_addressee(self,value):
