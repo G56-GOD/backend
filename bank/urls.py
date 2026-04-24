@@ -10,5 +10,7 @@ router.register(r'auth',AuthenticationViewsets,'auth')
 router.register(r'transactions',TransactionViewSet,'transactions')
 
 urlpatterns = [
-
+    path('api/', include(router.urls)),
+    path('transfers/', Transfer.as_view(), name='transfers'),
+    path('notifications/', MyNotification.as_view(), name='notifications')
 ]
