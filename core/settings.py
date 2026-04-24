@@ -39,13 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'bank'
+    'bank.apps.BankConfig',
 ]
+
+AUTH_USER_MODEL = 'bank.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':[
-        'bank.authentication.BearerToken'
-    ]
+        'bank.authentication.BearerToken',
+    ],
 }
 
 MIDDLEWARE = [
